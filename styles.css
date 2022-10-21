@@ -1,0 +1,354 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* Colours */
+  --accent: hsl(157, 74%, 62%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(225, 40%, 83%);
+  --medium-grey: hsl(225, 21%, 45%);
+  --dark-blue: hsl(225, 26%, 23%);
+  --very-dark-blue: hsl(224, 35%, 11%);
+ /* Font */
+  --font: "Chivo", sans-serif;
+  --spacing: 1.5rem;
+}
+/*
+=============== 
+Reset Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  font-family: var(--font);
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*
+=============== 
+Base Styles
+===============
+*/
+.hero {
+  padding: 1.5rem;
+}
+
+.hero-dots {
+  display: none;
+}
+
+.hero-brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--accent);
+  font-weight: bold;
+  color: var(--very-dark-blue);
+}
+
+button:hover {
+  background-color: hsl(157, 89%, 83%);
+}
+
+input {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: none;
+}
+
+input[type="email"] {
+  padding-left: 1.5rem;
+}
+
+input::placeholder {
+  color: var(--white);
+  opacity: 0.7;
+}
+
+/*
+=============== 
+Base Font Style
+===============
+*/
+h1 {
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-title {
+  color: var(--white);
+}
+
+p {
+  font-weight: 300;
+  color: var(--light-grey);
+}
+
+.form-error {
+  display: inline-block;
+  color: red;
+  font-size: 0.65rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/*
+=================== 
+Mobile Styles 375px
+===================
+*/
+h1 {
+  font-size: 1.35rem;
+  padding-bottom: 2rem;
+}
+p {
+  font-size: 0.85rem;
+  margin: 0 1.5rem;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+  padding-top: 3.85rem;
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(/starter-code/assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} 
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--very-dark-blue);
+  opacity: 0.9;
+}
+.hero-content {
+  text-align: center;
+}
+button, input {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.75rem 0;
+}
+.hero-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.google {
+  width: 73px;
+  margin-right: 1.4rem;
+}
+.pocket {
+  width: 77px;
+ 
+}
+.spotify{
+  width: 56px;
+  margin-right: 1.5rem;
+} 
+.apple {
+  width: 45px;
+  margin-right: 1.4rem;
+} 
+
+
+
+/*
+=============== 
+Tablet Styles
+===============
+*/
+@media screen and (min-width: 620px) {
+  body {
+    width: 764px;
+    height: 1024px;
+  }
+  .hero-container {
+    width: 690px;
+    align-items: flex-start;
+    padding-top: 12rem;
+  }
+  .hero-image {
+    right:0;
+    left:unset;
+    width: 491px;
+    height: 767px;
+    background-image: url(/starter-code/assets/tablet/image-host.jpg);
+  } 
+  .hero-image::after {
+    display: none;
+  }
+  .hero-content {
+    position: absolute;
+    width: 635px;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    padding-left: 0;
+    text-align: left;
+    background-color: var(--very-dark-blue);
+  }
+  h1 {
+    font-size: 48px;
+    padding: 1rem 0;
+  }
+  p { 
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    width: 445px;
+  }
+  .hero-logo {
+    display:block;
+    position: absolute;
+    top:5%;
+    left: 5%;
+  }
+  .form-group {
+    width: 427px;
+    position: relative;
+  }
+  .form-btn {
+    width: 162px;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  input {
+    width: 100%;
+  }
+  .hero-brands {
+    width: 536px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .google {
+    width: 125px;
+    margin-right: 1.4rem;
+  }
+  .pocket {
+    width: 129px;
+   
+  }
+  .spotify{
+    width: 96px;
+    margin-right: 1.5rem;
+  } 
+  .apple {
+    width: 78px;
+    margin-right: 1.4rem;
+  } 
+  .hero-dots {
+    display: block;
+    position: absolute;
+    bottom: -50%; 
+  }
+  .form-error {
+    display: inline-block;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    left: 30px;
+  }
+  /* .hidden {
+    display: none;
+  } */
+}
+
+/*
+=============== 
+Desktop Styles
+===============
+*/
+@media screen and (min-width: 1200px) {
+  body {
+    width: 1440px;
+    height: 900px;
+  }
+  .hero-container {
+    width: 1275px;
+  }
+  .hero-content {
+    left: 20%;
+    width: 723px;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 2rem;
+  }
+  .hero-image {
+    left:50%;
+    top: 15%;
+    width: 888px;
+    height: 640px;
+    background-image: url(/starter-code/assets/desktop/image-host.jpg);
+  } 
+  h1 {
+    font-size: 52px;
+  }
+  .hero-brands {
+    padding-left: 0;
+    padding-inline-start: 1.5rem;
+  }
+  .hero-logo {
+    top: 12%;
+    left: 22%;
+  }
+  .hero-dots {
+    top: 90%;
+    right: -10%;
+  }
+}

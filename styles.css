@@ -59,13 +59,13 @@ li {
 Base Styles
 ===============
 */
-.hero {
+/* .hero {
   padding: 1.5rem;
-}
+} */
 
-.hero-dots {
+/* .hero-dots {
   display: none;
-}
+} */
 
 .hero-brands {
   display: flex;
@@ -213,10 +213,10 @@ Tablet Styles
 ===============
 */
 @media screen and (min-width: 620px) {
-  body {
+  /* body {
     width: 764px;
     height: 1024px;
-  }
+  } */
   .hero-container {
     width: 690px;
     align-items: flex-start;
@@ -316,10 +316,10 @@ Desktop Styles
 ===============
 */
 @media screen and (min-width: 1200px) {
-  body {
+  /* body {
     width: 1440px;
     height: 900px;
-  }
+  } */
   .hero-container {
     width: 1275px;
   }

@@ -213,12 +213,12 @@ Tablet Styles
 ===============
 */
 @media screen and (min-width: 620px) {
-  /* body {
+  body {
     width: 764px;
     height: 1024px;
-  } */
+  }
   .hero-container {
-    width: 690px;
+    width: 635px;
     align-items: flex-start;
     padding-top: 12rem;
   }
@@ -237,13 +237,12 @@ Tablet Styles
     width: 635px;
     padding-top: 4rem;
     padding-bottom: 5rem;
-    padding-left: 0;
+    padding-left: 1rem;
     text-align: left;
     background-color: var(--very-dark-blue);
   }
   h1 {
     font-size: 48px;
-    padding: 1rem 0;
   }
   p { 
     margin-left: 0;
@@ -258,6 +257,7 @@ Tablet Styles
     left: 5%;
   }
   .form-group {
+    padding-bottom: 1rem;
     width: 427px;
     position: relative;
   }
@@ -296,7 +296,7 @@ Tablet Styles
   .hero-dots {
     display: block;
     position: absolute;
-    bottom: -50%; 
+    bottom: 15%; 
   }
   .form-error {
     display: inline-block;
@@ -315,16 +315,16 @@ Tablet Styles
 Desktop Styles
 ===============
 */
-@media screen and (min-width: 1200px) {
-  /* body {
+@media screen and (min-width: 992px) {
+  body {
     width: 1440px;
     height: 900px;
-  } */
+  }
   .hero-container {
     width: 1275px;
   }
   .hero-content {
-    left: 20%;
+    left: 15%;
     width: 723px;
     padding-inline-start: 1.5rem;
     padding-inline-end: 2rem;
@@ -345,18 +345,18 @@ Desktop Styles
   }
   .hero-logo {
     top: 12%;
-    left: 22%;
+    left: 18%;
   }
   .hero-dots {
-    top: 90%;
+    top: 80%;
+    right: -35%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-dots {
+    top: 68%;
     right: -10%;
   }
 }
 
-@media screen and (min-width: 2560px) {
-
-}
-
-@media screen and (min-width: 2560px) {
-
-}

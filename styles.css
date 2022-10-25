@@ -213,10 +213,6 @@ Tablet Styles
 ===============
 */
 @media screen and (min-width: 620px) {
-  body {
-    width: 764px;
-    height: 1024px;
-  }
   .hero-container {
     width: 635px;
     align-items: flex-start;
@@ -316,10 +312,6 @@ Desktop Styles
 ===============
 */
 @media screen and (min-width: 992px) {
-  body {
-    width: 1440px;
-    height: 900px;
-  }
   .hero-container {
     width: 1275px;
   }

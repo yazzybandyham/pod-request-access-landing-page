@@ -1,5 +1,5 @@
-const form = document.getElementById("form");
-const email = document.getElementById("email");
+const form = document.getElementById('form');
+const email = document.getElementById('email');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -12,9 +12,9 @@ function checkInputs() {
     const emailValue = email.value.trim();
 
     if(emailValue === '') {
-		setErrorFor(email, 'Email cannot be blank');
+		setErrorFor(email, 'Oops! Please add your email');
 	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Not a valid email');
+		setErrorFor(email, 'Oops! Please check your email');
 	} else {
         setSuccessFor(email);
     }
@@ -22,8 +22,8 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
     const formGroup = input.parentElement; //.form-group
-    const small = formGroup.querySelector("small");
-    formGroup.className = "form-group error"; // add error message inside small tag
+    const small = formGroup.querySelector('small');
+    formGroup.className = 'form-group error'; // add error message inside small tag
     small.innerHTML = message; // add error class
 }
 

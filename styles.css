@@ -59,13 +59,6 @@ li {
 Base Styles
 ===============
 */
-/* .hero {
-  padding: 1.5rem;
-} */
-
-/* .hero-dots {
-  display: none;
-} */
 
 .hero-brands {
   display: flex;
@@ -91,6 +84,10 @@ button:hover {
   background-color: hsl(157, 89%, 83%);
 }
 
+form {
+  padding-bottom: 3rem;
+}
+
 input {
   background-color: var(--dark-blue);
   color: var(--white);
@@ -106,11 +103,27 @@ input::placeholder {
   opacity: 0.7;
 }
 
+.error:focus {
+  outline: none;
+  border:1px solid red;
+}
+
+.success:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
 /*
 =============== 
 Base Font Style
 ===============
 */
+.hero {
+  padding: 1.5rem;
+}
+.hero-dots {
+  display: none;
+}
 h1 {
   text-transform: uppercase;
   color: var(--accent);
@@ -125,12 +138,12 @@ p {
   color: var(--light-grey);
 }
 
-.form-error {
+small {
   display: inline-block;
   color: red;
-  font-size: 0.65rem;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  position: absolute;
+  left: 10%;
+  /* visibility: hidden; */
 }
 
 /*
@@ -138,74 +151,75 @@ p {
 Mobile Styles 375px
 ===================
 */
-h1 {
-  font-size: 1.35rem;
-  padding-bottom: 2rem;
-}
-p {
-  font-size: 0.85rem;
-  margin: 0 1.5rem;
-}
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 3rem;
-  padding-top: 3.85rem;
-}
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url(/starter-code/assets/mobile/image-host.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} 
-.hero-image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--very-dark-blue);
-  opacity: 0.9;
-}
-.hero-content {
-  text-align: center;
-}
-button, input {
-  width: 100%;
-  border-radius: 2rem;
-  padding: 0.75rem 0;
-}
-.hero-brands {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.google {
-  width: 73px;
-  margin-right: 1.4rem;
-}
-.pocket {
-  width: 77px;
- 
-}
-.spotify{
-  width: 56px;
-  margin-right: 1.5rem;
-} 
-.apple {
-  width: 45px;
-  margin-right: 1.4rem;
-} 
-
-
+  h1 {
+    font-size: 1.35rem;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 0.85rem;
+    margin: 0 1.5rem;
+  }
+  form {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(/starter-code/assets/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  } 
+  .hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--very-dark-blue);
+    opacity: 0.9;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  button, input {
+    width: 100%;
+    border-radius: 2rem;
+    padding: 0.75rem 0;
+  }
+  .hero-brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .google {
+    width: 73px;
+    margin-right: 1.4rem;
+  }
+  .pocket {
+    width: 77px;
+   
+  }
+  .spotify{
+    width: 56px;
+    margin-right: 1.5rem;
+  } 
+  .apple {
+    width: 45px;
+    margin-right: 1.4rem;
+  } 
 
 /*
 =============== 
@@ -294,16 +308,12 @@ Tablet Styles
     position: absolute;
     bottom: 15%; 
   }
-  .form-error {
-    display: inline-block;
+  small {
+    /* visibility: hidden; */
     color: red;
-    font-size: 12px;
     position: absolute;
     left: 30px;
   }
-  /* .hidden {
-    display: none;
-  } */
 }
 
 /*
@@ -352,3 +362,6 @@ Desktop Styles
   }
 }
 
+ /* .hidden {
+    display: none;
+  } */

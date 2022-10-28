@@ -9,29 +9,34 @@ form.addEventListener('submit', (e) => {
 function checkInputs() {
 
     //get the values from inputs and removes white space entered by user
-    const emailValue = email.value.trim();
+    const emailValue = email.value;
+    // const emptyEmail = (emailValue) ? true : false;
+    const invalidEmail = !isEmail(emailValue);
 
     if(emailValue === '') {
-		setErrorFor(email, 'Oops! Please add your email');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Oops! Please check your email');
-	} else {
-        setSuccessFor(email);
-    }
+        setErrorFor(email, 'Oops! Please add your email');
+    } else {
+        if(invalidEmail) {
+            setErrorFor(email, 'Oops! Please check your email');
+        }
+    } 
 };
 
 function setErrorFor(input, message) {
     const formGroup = input.parentElement; //.form-group
     const small = formGroup.querySelector('small');
-    formGroup.className = 'form-group error'; // add error message inside small tag
+    formGroup.classList.add('error'); // add error message inside small tag
     small.innerHTML = message; // add error class
 }
 
 function setSuccessFor(input) {
 	const formGroup = input.parentElement;
-	formGroup.className = 'form-control success';
+	formGroup.classList.add('success');
 }
 
+// checks if email is valid
 function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    const regx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    return regx.test(email);
 }

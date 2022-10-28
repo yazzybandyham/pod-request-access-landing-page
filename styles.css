@@ -84,9 +84,9 @@ button:hover {
   background-color: hsl(157, 89%, 83%);
 }
 
-form {
+/* form {
   padding-bottom: 3rem;
-}
+} */
 
 input {
   background-color: var(--dark-blue);
@@ -106,11 +106,6 @@ input::placeholder {
 .error:focus {
   outline: none;
   border:1px solid red;
-}
-
-.success:focus {
-  outline: none;
-  border: 1px solid var(--accent);
 }
 
 /*
@@ -227,7 +222,7 @@ Tablet Styles
   .hero-container {
     width: 635px;
     align-items: flex-start;
-    padding-top: 12rem;
+    padding-top: 10rem;
   }
   .hero-image {
     right:0;
@@ -264,6 +259,7 @@ Tablet Styles
     left: 5%;
   }
   .form-group {
+    margin-left: 0;
     padding-bottom: 1rem;
     width: 427px;
     position: relative;
@@ -303,7 +299,7 @@ Tablet Styles
   .hero-dots {
     display: block;
     position: absolute;
-    bottom: 15%; 
+    bottom: -15%; 
   }
   small {
     color: red;
@@ -353,11 +349,9 @@ Desktop Styles
 
 @media screen and (min-width: 1200px) {
   .hero-dots {
-    top: 68%;
+    top: 80%;
     right: -10%;
   }
 }
 
- /* .hidden {
-    display: none;
-  } */
+ 

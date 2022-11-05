@@ -2,41 +2,42 @@ const form = document.getElementById('form');
 const email = document.getElementById('email');
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    checkInputs();
+  e.preventDefault();
+  validateEmail();
 })
 
-function checkInputs() {
-
-    //get the values from inputs and removes white space entered by user
-    const emailValue = email.value;
+function validateEmail() {
     // const emptyEmail = (emailValue) ? true : false;
-    const invalidEmail = !isEmail(emailValue);
+    const validEmail = email.value.trim();
+    // checks if email is valid
 
-    if(emailValue === '') {
-        setErrorFor(email, 'Oops! Please add your email');
+    if(validEmail === '') {
+      setErrorFor(email, 'Oops! Please add your email');
+    } else if (!isEmail(validEmail)) {
+    setErrorFor(email, 'Oops! Please check your email');
     } else {
-        if(invalidEmail) {
-            setErrorFor(email, 'Oops! Please check your email');
-        }
-    } 
+        removeError(email, '');
+    }
 };
 
+//takes an input and sends out a message
 function setErrorFor(input, message) {
     const formGroup = input.parentElement; //.form-group
-    const small = formGroup.querySelector('small');
-    formGroup.classList.add('error'); // add error message inside small tag
+    const small = document.querySelector('small');
+    small.classList.add('error'); // add error message inside small tag
     small.innerHTML = message; // add error class
-}
+};
 
-function setSuccessFor(input) {
-	const formGroup = input.parentElement;
-	formGroup.classList.add('success');
-}
+function removeError(input, message) {
+    const formGroup = input.parentElement; //.form-group
+    const small = document.querySelector('small');
+    small.classList.remove('error');
+    small.innerHTML = message;
+};
 
-// checks if email is valid
 function isEmail(email) {
+
     const regx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return regx.test(email);
-}
+};

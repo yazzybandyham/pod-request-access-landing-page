@@ -7,9 +7,7 @@ form.addEventListener('submit', (e) => {
 })
 
 function validateEmail() {
-    // const emptyEmail = (emailValue) ? true : false;
     const validEmail = email.value.trim();
-    // checks if email is valid
 
     if(validEmail === '') {
       setErrorFor(email, 'Oops! Please add your email');

@@ -19,8 +19,11 @@ This is a solution to the [Pod request access landing page challenge on Frontend
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+This project was created as part of the Frontend Mentor challenge to help improve my skills and create realistic portfolio ready work.
 
 ### The challenge
+
+The challenge is to create an early access landing page.
 
 Users should be able to:
 
@@ -29,6 +32,11 @@ Users should be able to:
 - Receive an error message when the form is submitted if:
   - The `Email address` field is empty should show "Oops! Please add your email"
   - The email is not formatted correctly should show "Oops! Please check your email"
+
+### Links
+
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-pod-landing-page-with-js-email-validation-gSY9QXh7Dj](https://your-solution-url.com)
+- Live Site URL: [https://podme-landing.netlify.app](https://your-live-site-url.com)
 
 ### Screenshot
 
@@ -42,10 +50,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
